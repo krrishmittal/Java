@@ -23,7 +23,7 @@ public class exp1part2 {
                 mat[i][j]=matrix1[i][j]-matrix2[i][j];
             }
         }
-        System.out.println("Sub of matrix:" );
+        System.out.println("Substraction of matrix:" );
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 System.out.print(mat[i][j]+" ");;
@@ -33,13 +33,15 @@ public class exp1part2 {
     }
     public static void mul(int [][]matrix1,int [][]matrix2,int n,int m){
         int [][]mat=new int [n][m];
-        for (int i=0;i<n;i++) {
-            for(int j=0;j<m;j++) {
-                for (int k=0;k<row;k++)
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                mat[i][j] = 0; // Initialize each cell to 0
+                for (int k = 0; k < m; k++) {
                     mat[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
             }
         }
-        System.out.println("Sum of matrix:" );
+        System.out.println("Multiply of matrix:" );
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 System.out.print(mat[i][j]+" ");
